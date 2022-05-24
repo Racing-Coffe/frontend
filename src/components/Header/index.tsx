@@ -21,6 +21,37 @@ const StyledHeader = styled.header`
 
 const StyledTitle = styled.h1``
 
+const StyledMenu = styled.nav`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+`
+
+const StyledList = styled.ul`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+`
+
+const StyledItem = styled.li`
+    margin-left: 1rem;
+`
+
+const StyledLink = styled.a`
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all .1s ease-out;
+
+    &:hover {
+        border-bottom: 2.5px #000 solid;
+        transition: all .1s ease-out;
+        font-weight: bold;
+    }
+`
+
 export default function Header() {
     return (
         <StyledHeader>
@@ -29,6 +60,15 @@ export default function Header() {
                     <Image src={Details.Logo.Src} alt={Details.Logo.Alt} width="300px" height="300px" />
                 </Link>
             </StyledTitle>
+            <StyledMenu>
+                <StyledList>
+                        <StyledItem>
+                            <Link href="/" passHref>
+                                <StyledLink>Example</StyledLink>
+                            </Link>
+                        </StyledItem>
+                </StyledList>
+            </StyledMenu>
         </StyledHeader>
     );
 }
