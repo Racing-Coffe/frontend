@@ -7,6 +7,20 @@ const Details = {
         Src: "/images/racingcoffe_full.png",
         Alt: "Racing Coffee Logo",
     },
+    MenuList: [
+        {
+            Name: "Home",
+            Link: "/",
+        },
+        {
+            Name: "About",
+            Link: "/about",
+        },
+        {
+            Name: "Social Media",
+            Link: "/social",
+        },
+    ]
 }
 
 const StyledHeader = styled.header`
@@ -62,11 +76,13 @@ export default function Header() {
             </StyledTitle>
             <StyledMenu>
                 <StyledList>
-                        <StyledItem>
-                            <Link href="/" passHref>
-                                <StyledLink>Example</StyledLink>
+                    {Details.MenuList.map((item, index) => (
+                        <StyledItem key={index}>
+                            <Link href={item.Link} passHref>
+                                <StyledLink>{item.Name}</StyledLink>
                             </Link>
                         </StyledItem>
+                    ))}
                 </StyledList>
             </StyledMenu>
         </StyledHeader>
