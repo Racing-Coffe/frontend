@@ -1,0 +1,8 @@
+{
+  "name": "racing-coffe-frontend",
+  "version": "1.0.0",
+  "description": "The Frontend of Racing Coffe",
+  "repository": "https://github.com/Racing-Coffe/frontend.git",
+  "author": "TheDevick",
+  "license": "MIT"
+}
