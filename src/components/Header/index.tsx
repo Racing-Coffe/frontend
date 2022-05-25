@@ -33,7 +33,7 @@ const StyledHeader = styled.header`
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 `
 
-const StyledTitle = styled.h1``
+const StyledTitle = styled.h2``
 
 const StyledMenu = styled.nav`
     display: flex;
